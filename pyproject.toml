@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-idempotency-key"
+version = "0.1.0"
+description = "Zero-overhead distributed idempotency layer preventing duplicate side effects during agent tool retries"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-idempotency-key = "agent_idempotency_key.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_idempotency_key*"]
